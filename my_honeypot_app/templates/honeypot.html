@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restricted Area - Honey Pot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1 style="color: red;">⚠️ Restricted Access ⚠️</h1>
+    <p>This is a secure area. Any unauthorized access attempts will be logged and investigated.</p>
+    <!-- Honey pot image with click logging -->
+    <a href="{{ url_for('log_click') }}">
+      <img src="{{ url_for('static', filename='images/honeypot.png') }}" alt="Honeypot">
+<!--"static/honey.png" alt="a pot of honey" style="display: block; margin: auto;"></img> -->
+    </a>
+    <a href="https://www.flaticon.com/free-icons/honey" title="honey icon" style="display: block; margin: auto;">Honey icons created by Those Icons - Flaticon</a>
+    <p><a href="{{ url_for('logout') }}">Logout</a></p>
+</body>
+</html>
